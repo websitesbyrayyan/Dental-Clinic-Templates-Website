@@ -1,0 +1,330 @@
+/* Shared final responsive safety layer for all dental template concepts. */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+svg,
+canvas,
+video {
+  max-width: 100%;
+}
+
+.site,
+.wrap,
+main,
+section,
+article,
+.hero,
+.services,
+.about,
+.contact,
+.form,
+.footer {
+  min-width: 0;
+}
+
+.hero h1,
+h2,
+.section-head,
+.section-intro,
+.lead,
+.contact-copy,
+.about-copy,
+.service,
+.form {
+  overflow-wrap: anywhere;
+}
+
+.navlinks a,
+.btn,
+.nav-cta {
+  min-height: 44px;
+}
+
+.navlinks a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.tooth {
+  width: clamp(112px, 31%, 210px);
+  height: auto;
+  max-height: 78%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.portrait svg {
+  width: min(75%, 260px);
+  height: auto;
+  max-height: 330px;
+}
+
+.hero-actions .btn,
+.hero-actions .nav-cta {
+  white-space: normal;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .wrap {
+    width: calc(100% - 48px);
+  }
+
+  .hero {
+    gap: 36px;
+  }
+
+  .about {
+    gap: 40px;
+  }
+
+  .contact {
+    gap: 44px;
+  }
+}
+
+@media (max-width: 820px) {
+  .wrap {
+    width: calc(100% - 32px);
+  }
+
+  .nav {
+    min-height: 72px;
+  }
+
+  .navlinks.open {
+    z-index: 20;
+  }
+
+  .navlinks a {
+    min-height: 44px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .hero h1 {
+    max-width: 100%;
+  }
+
+  .art {
+    width: 100%;
+    height: clamp(300px, 62vw, 390px);
+  }
+
+  .tooth {
+    width: clamp(130px, 38%, 180px);
+    max-height: 72%;
+  }
+
+  .section-head {
+    align-items: start;
+  }
+
+  .services,
+  .trust {
+    min-width: 0;
+  }
+
+  .about,
+  .contact {
+    grid-template-columns: 1fr;
+  }
+
+  .portrait {
+    min-height: 260px;
+  }
+
+  .footer {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 520px) {
+  .wrap {
+    width: calc(100% - 24px);
+  }
+
+  .brand {
+    max-width: calc(100% - 108px);
+  }
+
+  .menu {
+    min-width: 78px;
+  }
+
+  .hero {
+    gap: 26px;
+  }
+
+  .hero h1 {
+    font-size: clamp(38px, 12vw, 48px);
+    line-height: 1.02;
+  }
+
+  .lead {
+    font-size: 14px;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions .btn,
+  .hero-actions .nav-cta {
+    width: 100%;
+  }
+
+  .art {
+    height: 300px;
+  }
+
+  .art-label,
+  .art-number {
+    max-width: calc(100% - 32px);
+  }
+
+  .tooth {
+    width: 128px;
+    max-height: 68%;
+  }
+
+  .trust {
+    grid-template-columns: 1fr;
+  }
+
+  .trust div {
+    min-height: 44px;
+  }
+
+  .services {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding-inline: 0;
+  }
+
+  .section-head {
+    gap: 16px;
+  }
+
+  h2 {
+    font-size: clamp(30px, 10vw, 40px);
+  }
+
+  .about {
+    gap: 24px;
+  }
+
+  .portrait {
+    min-height: 220px;
+  }
+
+  .quote {
+    margin-top: 48px;
+  }
+
+  .quote blockquote {
+    font-size: clamp(21px, 7.5vw, 28px);
+  }
+
+  .form {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .form label,
+  .form .wide,
+  .form button,
+  .form-note,
+  .form-status {
+    grid-column: 1;
+  }
+
+  .form input,
+  .form select,
+  .form textarea,
+  .form button {
+    min-height: 44px;
+  }
+
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 360px) {
+  .wrap {
+    width: calc(100% - 20px);
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .art {
+    height: 270px;
+  }
+
+  .tooth {
+    width: 112px;
+  }
+
+  .brand {
+    letter-spacing: 0.06em;
+  }
+}
+
+/* Template 04: keep the red editorial line as a deliberate text block. */
+.form-template .hero h1 em {
+  display: inline-block;
+  max-width: 100%;
+  margin-top: 0.12em;
+  padding: 0.04em 0.11em 0.08em;
+  line-height: 0.95;
+  white-space: normal;
+}
+
+@media (max-width: 520px) {
+  .form-template .hero h1 em {
+    padding-inline: 0.08em;
+  }
+}
+
+/* Template 06: explicit reflow for the futuristic hero and illustration. */
+@media (max-width: 820px) {
+  .nova-template .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .nova-template .art {
+    height: 340px;
+  }
+
+  .nova-template .tooth {
+    width: 150px;
+  }
+}
+
+@media (max-width: 520px) {
+  .nova-template .art {
+    height: 300px;
+  }
+
+  .nova-template .tooth {
+    width: 128px;
+  }
+
+  .nova-template .services {
+    gap: 12px;
+  }
+}
